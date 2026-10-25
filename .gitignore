@@ -1,0 +1,11 @@
+# Client data is confidential. Never commit it.
+clients/*
+!clients/README.md
+
+# Secrets and local files
+.env
+.env.*
+.DS_Store
+Thumbs.db
+*.zip
+__pycache__/
