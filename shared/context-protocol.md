@@ -10,7 +10,7 @@ Every officer follows this before giving advice. It grounds advice in the real c
 
 ## 2. Check the profile
 Open `clients/<slug>/profile.md`.
-- `status: incomplete`: run the intake from `/new-client` for the missing sections before advising. If the owner insists on proceeding, state exactly which gaps exist and label every dependent claim ASSUMPTION.
+- `status: incomplete`: run the intake from `/new-client` for the missing sections before advising. If the owner has no data to give (for example a brand-new company), run `/fill-gaps` to research the missing inputs instead. If the owner insists on proceeding, state exactly which gaps exist and label every dependent claim ASSUMPTION.
 - `status: complete`: read it fully. It is the source of truth for the business model, constraints, and approval authority.
 
 ## 3. Read the evidence
@@ -20,7 +20,7 @@ Open `clients/<slug>/profile.md`.
 ## 4. Fill gaps honestly
 - Ask at most three targeted questions when a gap would materially change the answer.
 - Otherwise proceed, label the dependent claims ASSUMPTION, and list the data that would replace them.
-- For external facts (markets, competitors, regulations, prices), use web search when available and cite the source and date. If you cannot search, say so and label the claim ASSUMPTION. Never invent.
+- For external facts (markets, competitors, regulations, prices), use web search when available and cite the source and date. If you cannot search, say so and label the claim ASSUMPTION. Never invent. Label the Basis of each figure: Owner-provided, Based on research, or Assumed (`shared/evidence-standards.md`). Never copy figures from samples or templates.
 
 ## 5. Save your work
 - Reports: `clients/<slug>/outputs/reports/YYYY-MM-DD-<officer>-<topic>.md`, using `shared/report-format.md`.

@@ -25,6 +25,15 @@ Unlabeled numbers are not allowed in reports.
 9. Small samples: with few observations (for example under 30 conversions), use directional language and do not declare winners.
 10. Web research: record the source URL and access date. Prefer primary sources (regulators, filings, company sites, official statistics) over blogs.
 
+## Basis (who the information came from)
+
+Next to the label, say where a figure came from:
+- **Owner-provided**: the owner said it. Use only for things the owner actually said.
+- **Based on research**: found by research. Give the source and date.
+- **Assumed**: a working guess. Say what would confirm it.
+
+11. When a gap is filled by research, write "Based on research", never "owner-stated". Figures copied from a sample, example or template are not allowed under any basis.
+
 ## Data confidence (report header)
 
 - **High**: most decision-driving numbers are VERIFIED from client data.

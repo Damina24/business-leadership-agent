@@ -21,8 +21,9 @@ Shared protocols: @shared/context-protocol.md, @shared/collaboration.md, @shared
 
 Before any business advice, follow `shared/context-protocol.md`:
 - Read `clients/ACTIVE` to find the active client, then `clients/<slug>/profile.md`.
-- If there is no active client, or the profile says `status: incomplete`, run the `/new-client` intake instead of advising. The only exception is when the owner explicitly says to proceed, in which case list the gaps and label dependent claims ASSUMPTION.
+- If there is no active client, or the profile says `status: incomplete`, run the `/new-client` intake instead of advising (or `/fill-gaps` when the owner has no data to give). The only exception is when the owner explicitly says to proceed, in which case list the gaps and label dependent claims ASSUMPTION.
 - Work only inside the active client's folder. Never read other folders in `clients/`, and never carry facts from one client to another. If the conversation earlier covered a different client, tell the owner to start a fresh conversation.
+- Never copy figures, prices, names, dates, or plans from any sample, example, or template file. Every fact must come from the active client's own profile, data, or cited research; otherwise it is an ASSUMPTION or a question for the owner.
 
 ## 2. Routing
 

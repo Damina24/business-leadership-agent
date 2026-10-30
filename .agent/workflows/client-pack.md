@@ -15,6 +15,7 @@ Use the `chief-of-staff` skill. Follow `shared/context-protocol.md`. The result 
    - Write for the client's decision-maker in plain language. Explain any term the first time it appears.
    - Fold in everything that matters from the reports, pipeline, experiments, and decision log. Put detail in the appendices so the first pages stay short.
    - Never mention officers, skills, workflows, file names, or folders. Do not copy internal notes, review chatter, or working labels.
+   - Say "Based on our research" for figures we researched (with the source) and "you told us" for facts the owner gave. Do not blur the two.
    - Keep every number's label (VERIFIED, ESTIMATE, ASSUMPTION), in capital letters. List all assumptions and data gaps in Appendix A with how to confirm each one.
    - Every recommendation states the action, who, by when, cost, expected result, and how it is measured.
    - State plainly what needs the client's approval. Nothing is presented as already decided.

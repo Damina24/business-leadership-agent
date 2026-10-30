@@ -15,6 +15,7 @@ GUIDE FOR THE AUTHOR (comments like this do not appear in the PDF)
 - Keep it to what the client needs to understand and act on. Aim for 8 to 15 pages in total.
 - Every important number carries VERIFIED, ESTIMATE, or ASSUMPTION, written in capitals, so it prints as a tag.
 - Every recommendation needs: action, who, by when, cost, expected result, how it is measured.
+- Say "based on our research" for researched figures and "you told us" for facts the owner gave. If the owner wants a fast start, write section 5.5 as the first 3 days.
 - Keep the section titles and order. Delete a section only if it truly does not apply, and renumber.
 -->
 

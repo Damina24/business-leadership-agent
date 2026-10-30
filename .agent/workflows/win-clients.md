@@ -6,6 +6,8 @@ description: Build a 30/60/90-day plan to win new customers, covering ideal cust
 
 Follow `shared/context-protocol.md`. Use the `chief-of-staff` skill to coordinate.
 
+0. **Gaps first.** If the profile's business-model, financial or operations sections are empty or "unknown", run `/fill-gaps` first, then continue with the researched working figures, each marked with its Basis. If the owner wants to start selling within days, include a days 1 to 3 launch checklist and treat early customer conversations as sales, not a delay.
+
 1. **Ideal customer** (`business-development-manager`): define the ICP from the client's best existing customers.
 2. **Prospects and partners** (`business-development-manager`): build a first prospect list and partnership list. Every entry needs a real source and date. Never invent contacts.
 3. **Channels and tests** (`head-of-growth`): pick two or three channels, with experiment cards, budgets, and thresholds.
