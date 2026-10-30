@@ -9,11 +9,11 @@ Use when the profile has empty or "unknown" sections and the owner cannot supply
 The aim is speed without pretending. Every figure carries a **Basis** the owner can see at a glance:
 - **Owner-provided**: the owner told us (only for things the owner actually said).
 - **Based on research**: found by research, with source and date.
-- **Assumed**: a working guess, with what would confirm it.
+- **Assumed**: a working guess, used only when research finds nothing, with what would confirm it.
 
 1. **List the gaps.** Read `clients/<slug>/profile.md` and `clients/<slug>/data/`. Note every empty, "unknown" or missing item.
-2. **Ask only what research cannot supply.** In one message, ask at most three short questions: cash available, number of people and hours per month on client work, and rough monthly running costs. If the owner does not know a figure, do not invent one: show three scenarios (low, middle, high) with Basis "Assumed" and continue.
-3. **Research the rest** using web search, with source URL and access date for each finding. Prefer official or primary sources.
+2. **Ask only for what is truly the owner's own.** In one message, ask at most three short questions: cash available, number of people and hours per month on client work, and rough monthly running costs. If the owner does not know or does not answer, do not make up scenarios. Research real benchmarks for comparable businesses in the same country and city (for example typical start-up capital for a small software company, realistic productive hours per developer per month, typical monthly costs) and use those as the working figures, with Basis "Based on research", the source and the date. Say clearly that the owner's own figure may differ and that the plan should be rerun when it is known.
+3. **Research the rest** using web search, with source URL and access date for each finding. Prefer official or primary sources. Try several searches and sources before giving up on a figure. Only if nothing reliable exists, write "no reliable data found" and say how to get it; do not substitute a made-up scenario.
    - Market and best first customer group (`growth-strategist`, `chief-strategy-officer`).
    - Starter offers and price ranges in the local currency, low, middle and high (`revenue-growth-manager`).
    - Delivery hours and delivery cost per offer, as ranges (`chief-operating-officer`).
