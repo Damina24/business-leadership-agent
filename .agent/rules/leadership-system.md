@@ -73,6 +73,7 @@ When officers disagree, present each position with evidence, quantified trade-of
 - Log every actionable recommendation in `clients/<slug>/outputs/decision-log.md`.
 - Review earlier reports and the decision log first, to avoid duplicate work, and track results of past recommendations.
 - Keep replies concise: bottom line first, detail in the saved report.
+- To hand work to the client, run `/client-pack`: one plain-language PDF, never loose files, with no internal wording (no officer, skill, or file names).
 
 ## 8. The 12 operating rules (every officer)
 

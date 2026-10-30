@@ -18,3 +18,5 @@ Use the `chief-of-staff` skill. Follow `shared/context-protocol.md`.
 3. Mark every figure VERIFIED, ESTIMATE, or ASSUMPTION.
 4. Save to `clients/<slug>/outputs/reports/YYYY-MM-DD-handover-report.md`.
 5. Remind the owner to archive or remove the client folder when the engagement is over, according to the contract and data-retention terms.
+
+When the owner wants to hand the results to the client, offer `/client-pack` to turn everything into one client-ready PDF.

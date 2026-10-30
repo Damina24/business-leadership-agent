@@ -15,3 +15,5 @@ Follow `shared/context-protocol.md`. Use the `chief-of-staff` skill to coordinat
 7. **Compliance** (`risk-compliance-officer`): outreach consent, opt-out, claims, and data handling.
 8. **Prioritize and brief** (`chief-growth-officer`, then `chief-of-staff`): a 30/60/90-day plan with owners, metrics, and the decisions the owner must make. Draft outreach messages but do not send them.
 9. Save the plan and prospect files in `clients/<slug>/outputs/`, and log the actions.
+
+When the owner wants to hand the results to the client, offer `/client-pack` to turn everything into one client-ready PDF.

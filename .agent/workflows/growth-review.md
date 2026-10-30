@@ -16,3 +16,5 @@ Run the full chain for the active client. Use the `chief-of-staff` skill to coor
 8. **Prioritize** (`chief-growth-officer`): score and rank initiatives with the opportunity model. Pick a short list that fits capacity and budget.
 9. **Quality gate and brief** (`chief-of-staff`): run `shared/quality-gate.md`, surface disagreements, and produce the decision brief.
 10. Save to `clients/<slug>/outputs/reports/YYYY-MM-DD-growth-review.md`, and add the actionable items to the decision log with review dates.
+
+When the owner wants to hand the results to the client, offer `/client-pack` to turn everything into one client-ready PDF.

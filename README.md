@@ -29,6 +29,8 @@ The three added officers fill gaps in the original seven: nobody coordinated the
 4. In the agent chat, type `/new-client`. The agent interviews you and builds the client profile.
 5. Then try `/growth-review`, or just ask a question such as "How do we get more clients?".
 
+Want to see it in action first? Read the worked example in `examples/abuja-digital-demo/WALKTHROUGH.md`.
+
 ### Folder name note
 Antigravity's workspace folder has been `.agent/` and newer versions default to `.agents/`, while keeping `.agent/` working. This repo uses `.agent/`. If your panels show nothing, rename `.agent` to `.agents` and reopen the folder.
 
@@ -43,6 +45,7 @@ Antigravity's workspace folder has been `.agent/` and newer versions default to 
 | `/win-clients` | 30/60/90-day plan to acquire customers |
 | `/monthly-review` | Checks past decisions against results and resets priorities |
 | `/handover-report` | End-of-engagement summary |
+| `/client-pack` | One client-ready PDF with the plan, actions, decisions, and appendices |
 
 You can also ask in plain language. Each skill's description tells the agent when to use it.
 
@@ -66,6 +69,18 @@ clients/
 - **Start a new conversation when you switch clients**, so nothing from the previous client lingers in the chat.
 - Nothing inside `clients/` is committed to Git (see `.gitignore`). Do not remove that rule. Client data is confidential.
 
+## Handing the work to your client (one PDF)
+
+When the work is done, run `/client-pack`. Instead of loose files, you get **one PDF** the client can read and act on: a cover and contents, an executive summary, findings, a dated action plan with owners, the decisions you need from them, the numbers and how reliable they are, risks and legal checks, and appendices (assumptions, prospects, experiments, decision record, sources).
+
+1. Type `/client-pack`. The agent asks three quick questions (who it is addressed to, who it is from, and anything to leave out), then writes the client-facing document in plain language with no internal wording.
+2. It builds the PDF and saves it in `clients/<slug>/outputs/client-pack/`.
+3. Read it before you send it. Every recommendation is still the client's decision.
+
+One-time setup: `pip install markdown`. The PDF is made with Microsoft Edge or Google Chrome, which most computers already have. If neither is found, the script saves a web page and tells you how to print it to PDF.
+
+See a finished example: `examples/abuja-digital-demo/client/outputs/client-pack/`.
+
 ## How the team works
 
 - **Context first.** No advice until a client profile exists. See `shared/context-protocol.md`.
@@ -87,6 +102,9 @@ clients/
 shared/                          protocols every officer follows
 templates/client/                blank client profile, data folder, decision log
 clients/                         YOUR client data (not committed)
+examples/abuja-digital-demo/     worked example: a fictional new company, start to finish
+templates/client-pack/           template for the client-facing document
+scripts/build_client_pack.py     turns the client pack into one PDF
 scripts/validate.py              structure checks
 AGENTS.md                        entry point for other agent tools
 ```

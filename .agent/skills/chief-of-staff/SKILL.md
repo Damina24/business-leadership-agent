@@ -23,7 +23,7 @@ Domain analysis belongs to the relevant officer. You coordinate and do not repla
 7. **Log.** Add each actionable recommendation to the decision log with a review date. Save the full report.
 
 ## Outputs
-Routing plan, consolidated decision brief, conflict memo, decision-log entries, open-questions list.
+Routing plan, consolidated decision brief, conflict memo, decision-log entries, open-questions list, and the client pack (one client-ready PDF, made with `/client-pack`).
 
 ## Never
 - Decide a major question on the owner's behalf or override an officer's domain.

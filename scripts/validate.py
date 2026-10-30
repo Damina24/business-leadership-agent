@@ -5,7 +5,7 @@ Checks:
 - every skill folder has SKILL.md with matching name and a description
 - the always-on rule stays under Antigravity's 12,000-character limit
 - every workflow has a description
-- every shared/ or templates/ path mentioned in docs exists
+- every shared/, templates/ or scripts/ path mentioned in docs exists
 - skills named in workflows exist, and each skill's references/playbook.md exists
 - client data is excluded from Git
 """
@@ -74,13 +74,18 @@ for w in WORKFLOWS.glob("*.md"):
             errors.append(f"workflow {w.name}: references missing skill {ref}")
 
 # Path references in markdown files
-path_re = re.compile(r"\b((?:shared|templates)/[A-Za-z0-9_./-]+\.md)\b")
+path_re = re.compile(r"\b((?:shared|templates)/[A-Za-z0-9_./-]+\.md|scripts/[A-Za-z0-9_.-]+\.py)")
 for md in ROOT.rglob("*.md"):
     if "clients" in md.relative_to(ROOT).parts[:1]:
         continue
     for ref in set(path_re.findall(md.read_text(encoding="utf-8"))):
         if not (ROOT / ref).exists():
             errors.append(f"{md.relative_to(ROOT)}: references missing file {ref}")
+
+# Example client packs must be finished (no [[placeholders]])
+for pack in ROOT.glob("examples/**/client-pack/client-pack.md"):
+    if "[[" in pack.read_text(encoding="utf-8"):
+        errors.append(f"{pack.relative_to(ROOT)}: still contains [[placeholders]]")
 
 # Privacy guard
 gi = (ROOT / ".gitignore").read_text(encoding="utf-8")

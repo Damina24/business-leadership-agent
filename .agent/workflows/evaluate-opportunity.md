@@ -14,3 +14,5 @@ Ask the owner to describe the opportunity in a sentence if they have not. Follow
 6. **Priority** (`chief-growth-officer`): how it ranks against other growth options. Recommend **Go**, **Test first** (with a smallest viable test and kill criteria), or **No-go**.
 7. **Brief** (`chief-of-staff`): quality gate, then a decision brief or conflict memo for the owner.
 8. Save the report to `clients/<slug>/outputs/reports/` and log the decision.
+
+When the owner wants to hand the results to the client, offer `/client-pack` to turn everything into one client-ready PDF.
