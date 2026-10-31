@@ -41,7 +41,7 @@ Antigravity's workspace folder has been `.agent/` and newer versions default to 
 | `/growth-review` | Full cross-officer review with prioritized actions |
 | `/evaluate-opportunity` | Go, test-first, or no-go on a new market, product, or partnership |
 | `/fill-gaps` | For a client with no data: researches the missing inputs and fills the profile with clearly labeled research-based figures |
-| `/win-clients` | 30/60/90-day plan to acquire customers |
+| `/win-clients` | Go-to-market plan: best customer group, starter offer and price, named prospects, scripts, and a dated 90-day plan |
 | `/monthly-review` | Checks past decisions against results and resets priorities |
 | `/handover-report` | End-of-engagement summary |
 | `/client-pack` | One client-ready PDF with the plan, actions, decisions, and appendices |

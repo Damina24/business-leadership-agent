@@ -1,5 +1,5 @@
 ---
-title: [[Document title, for example "Growth Plan and Recommendations"]]
+title: [[Document title, for example "Go-to-Market Plan: Winning Your First Paying Clients"]]
 client: [[Client organization name]]
 prepared_for: [[Name and role of the client's decision-maker]]
 prepared_by: [[Consultant or business name and contact]]
@@ -10,159 +10,203 @@ confidential: true
 
 <!--
 GUIDE FOR THE AUTHOR (comments like this do not appear in the PDF)
-- This is ONE document for the client's decision-maker. Plain language. No officer names, file names, command names, or internal notes.
+- This document gives ANSWERS, not tasks. The client must be able to start tomorrow using only this document.
+- Do not ask the client to choose, decide, supply or provide anything that research can answer. Make the choice, give the reasons and the runner-up. The client's only decisions are to approve or override.
 - Replace every [[...]] item. The PDF builder refuses to run while any remain.
-- Keep it to what the client needs to understand and act on. Aim for 8 to 15 pages in total.
-- Every important number carries VERIFIED, ESTIMATE, or ASSUMPTION, written in capitals, so it prints as a tag.
-- Every recommendation needs: action, who, by when, cost, expected result, how it is measured.
-- Say "based on our research" for researched figures and "you told us" for facts the owner gave. If the owner wants a fast start, write section 5.5 as the first 3 days.
-- Keep the section titles and order. Delete a section only if it truly does not apply, and renumber.
+- Plain language. No officer names, file names, command names, or internal notes.
+- Every important number carries VERIFIED, ESTIMATE, or ASSUMPTION in capitals. Say "based on our research" for researched figures (with the source) and "you told us" for facts the owner gave.
+- Show the arithmetic behind every forecast. Show expected results as ranges.
+- Every action needs: what, who, by when, cost, target, and how it is measured.
+- Name real prospects with sources. Never invent a business, contact or statistic.
+- Keep the section titles and order. Aim for 15 to 25 pages including appendices.
 -->
 
 # 1. Executive summary
 
-[[Two or three sentences: who the client is, where they stand, and what this document gives them.]]
+[[One paragraph: the answer. Who to sell to first, what to sell, at what price, how many clients to expect by when, and the cash needed.]]
 
-**What we recommend**
+**The plan in five lines:**
+- **Sell to:** [[Chosen customer group]]
+- **Sell this:** [[Starter offer in one line, with price]]
+- **Reach them through:** [[Main channels]]
+- **Start:** [[Date]], with [[number]] named prospects ready
+- **Expect by [[date]]:** [[Signed clients and revenue, as a range]]
 
-- [[Recommendation 1 in one line]]
-- [[Recommendation 2 in one line]]
-- [[Recommendation 3 in one line]]
+**What you can expect:**
 
-**What you can expect**
+| Measure | Expected | Range | By when | Basis |
+|---|---|---|---|---|
+| [[Outreach sent]] | [[n]] | [[low to high]] | [[date]] | [[label]] |
+| [[Signed clients]] | [[n]] | [[low to high]] | [[date]] | [[label]] |
+| [[Revenue]] | [[amount]] | [[low to high]] | [[date]] | [[label]] |
+| [[Cash needed]] | [[amount]] | [[low to high]] | [[date]] | [[label]] |
 
-| Measure | Target | By when | Basis |
-|---|---|---|---|
-| [[Measure]] | [[Target]] | [[Date]] | ESTIMATE |
-
-**What we need from you**
-
-[[List the decisions in Section 8 in one line each.]]
-
-> **Important:** [[One or two sentences on the biggest risk and on how reliable the numbers are.]]
+> **Important:** [[The biggest risk and how reliable the evidence is.]]
 
 # 2. What you asked us to do
 
-[[Scope of the engagement in plain words.]]
+[[Scope in two or three sentences.]]
 
 | Objective | Measure | Starting point | Target | Deadline |
 |---|---|---|---|---|
-| [[Objective]] | [[Measure]] | [[Baseline]] | [[Target]] | [[Date]] |
+| [[Objective]] | [[Measure]] | [[Start]] | [[Target]] | [[Date]] |
 
 # 3. Where you are today
 
-[[Short snapshot of the business: what it does, team, offer and prices, customers, cash and costs, capacity.]]
-
-| Item | Current position | Reliability |
+| Item | Current position | Source |
 |---|---|---|
-| [[Item]] | [[Value]] | VERIFIED |
+| [[Item]] | [[Position]] | [[You told us / Based on our research]] |
 
-**Market facts we relied on**
+[[What research filled in, and which of your own figures would change the plan.]]
 
-- [[Fact, with source name and year]] (VERIFIED)
+# 4. Who to sell to first
 
-# 4. What we found
+[[The chosen customer group and why, in plain words.]]
 
-1. **[[Finding title]].** [[One to three sentences with the evidence.]]
-2. **[[Finding title]].** [[One to three sentences with the evidence.]]
+| Customer group | Pain tied to money | Ability to pay | Speed of decision | Low competition | Named prospects found | Total |
+|---|---|---|---|---|---|---|
+| [[Group]] | [[1-5]] | [[1-5]] | [[1-5]] | [[1-5]] | [[1-5]] | [[total]] |
 
-# 5. The plan
+**Evidence for the choice:** [[Sourced facts]]
 
-## 5.1 Priorities
+**Runner-up:** [[Group and why it is second]]
 
-| Priority | Initiative | Why | When |
-|---|---|---|---|
-| 1 | [[Initiative]] | [[Reason]] | [[Timing]] |
+**Confidence and stop rule:** [[Confidence level, and the result that would make us switch]]
 
-## 5.2 Offer and pricing
+# 5. What to sell and at what price
 
-[[Offer ladder, pricing logic, discounts, payment terms. Say clearly which prices and discounts need the client's approval.]]
+## 5.1 The starter offer
 
-## 5.3 Winning customers
+[[Name, what the customer gets, delivery time, what is excluded.]]
 
-[[Ideal customer, how to reach them, and the tests to run with their success and stop thresholds.]]
+## 5.2 Price
 
-## 5.4 Action plan
+| Item | Price | Basis |
+|---|---|---|
+| [[Pilot, standard, monthly plan]] | [[amount]] | [[Competitor prices and customer value]] |
 
-| # | Action | Who | By when | Cost | Result to look for |
-|---|---|---|---|---|---|
-| 1 | [[Action]] | [[Person]] | [[Date]] | [[Cost]] | [[Result]] |
+## 5.3 Margin check
 
-## 5.5 Your first 7 days
+[[Hours, cost per hour, margin by client number, with arithmetic.]]
 
-1. [[Action the client can do this week]]
-2. [[Action]]
-3. [[Action]]
+## 5.4 Competitor prices
 
-# 6. Money and capacity
+[[Short table of what others charge, with the gap you fill. Full list in the appendix.]]
 
-[[Cash outlook in base and downside cases, break-even timing, the lowest cash point, and the team's capacity against the plan. Explain simply how the numbers were built.]]
+# 6. How to win your first clients
 
-| Case | Assumptions | Lowest cash | Break-even |
-|---|---|---|---|
-| Base | [[Assumptions]] | [[Amount and month]] | [[Month]] |
-| Downside | [[Assumptions]] | [[Amount and month]] | [[Month]] |
+## 6.1 Channels and expected response
 
-# 7. Risks and legal checks
+[[Channels, in order, with sourced or assumed response rates.]]
+
+## 6.2 Expected funnel
+
+| Stage | Expected | Basis |
+|---|---|---|
+| [[Contacts, replies, demos, proposals, signed]] | [[n]] | [[label]] |
+
+## 6.3 Daily routine
+
+[[What to do each working day.]]
+
+## 6.4 Scripts, objections and proposal
+
+[[Summary. Full ready-to-send text in the appendix.]]
+
+# 7. 90-day action plan
+
+## 7.1 Days 1 to 3
+
+| Day | Action | Who | Cost | Done when |
+|---|---|---|---|---|
+| [[Day]] | [[Action]] | [[Who]] | [[Cost]] | [[Evidence]] |
+
+## 7.2 Weeks 1 to 4
+
+| Week | Targets | Actions |
+|---|---|---|
+| [[Week]] | [[Numbers]] | [[Actions]] |
+
+## 7.3 Months 2 and 3
+
+[[Dated actions with owners, costs and targets.]]
+
+## 7.4 Scoreboard and stop rules
+
+| Measure | Weekly target | Stop or change when |
+|---|---|---|
+| [[Measure]] | [[Target]] | [[Rule]] |
+
+# 8. Money: what to expect
+
+## 8.1 Running costs
+
+[[Researched monthly cost base, with sources.]]
+
+## 8.2 Revenue and cash by month
+
+| Month | Projects | Revenue | Costs | Cash position |
+|---|---|---|---|---|
+| [[Month]] | [[n]] | [[amount]] | [[amount]] | [[amount]] |
+
+## 8.3 Break-even and cash needed
+
+[[Arithmetic and the cash level the plan needs. Include the case where sales are half the plan.]]
+
+# 9. Setting up legally and safely
+
+| Step | What to do | Cost | Source | Needs a professional? |
+|---|---|---|---|---|
+| [[Step]] | [[Action]] | [[Cost]] | [[Source]] | [[Yes or no]] |
+
+**Risks:**
 
 | Risk | Why it matters | What we do about it |
 |---|---|---|
-| [[Risk]] | [[Impact]] | [[Mitigation]] |
+| [[Risk]] | [[Why]] | [[Action]] |
 
-**Conditions to follow**
+# 10. What we need you to approve
 
-- [[Condition from the compliance review]]
+| # | Our decision | What approving means | Alternative if you disagree |
+|---|---|---|---|
+| [[n]] | [[Decision already made]] | [[Spend or commitment]] | [[Alternative]] |
 
-**Needs a qualified professional**
+# 11. How we will track progress
 
-- [[Item that needs a lawyer, accountant, or regulator check]]
+[[Review dates, the scoreboard, and what would change the plan.]]
 
-# 8. Decisions we need from you
+# Appendix A: Research basis
 
-| # | Decision | Our recommendation | Alternative | Needed by |
+| Figure | Value | Source and date | Confidence | How to verify |
 |---|---|---|---|---|
-| 1 | [[Decision]] | [[Recommended option]] | [[Alternative]] | [[Date]] |
+| [[Figure]] | [[Value]] | [[Source]] | [[Level]] | [[Method]] |
 
-[[If two specialists disagreed on a point, explain both views, the cost of each, and what would settle it.]]
+# Appendix B: Named prospects
 
-# 9. How we will track progress
+[[At least 30 real prospects with business, area, public channel, why they need the offer, and the source.]]
 
-| Objective | Starting point | Target | Check date |
-|---|---|---|---|
-| [[Objective]] | [[Baseline]] | [[Target]] | [[Date]] |
+# Appendix C: Ready-to-send scripts
 
-[[Review dates and the rules that trigger a change of plan.]]
+[[First message, follow-ups, call script, proposal outline, pilot terms.]]
 
-# Appendix A: Assumptions and data to confirm first
+# Appendix D: Answers to common objections
 
-| Item | What we assumed | How to confirm it | Why it matters |
-|---|---|---|---|
-| [[Item]] | [[Assumption]] | [[Method]] | [[Impact]] |
+| What they say | What to answer |
+|---|---|
+| [[Objection]] | [[Answer]] |
 
-# Appendix B: Prospects and pipeline
+# Appendix E: Competitor prices
 
-[[Summary of the target customers and the current pipeline. Only real, sourced entries.]]
+[[Table of named competitors, offers and published prices, with dates.]]
 
-# Appendix C: Experiments
+# Appendix F: Sources
 
-| Test | Hypothesis | Cost | Success threshold | Stop threshold |
-|---|---|---|---|---|
-| [[Test]] | [[Hypothesis]] | [[Cost]] | [[Threshold]] | [[Threshold]] |
+[[Numbered list with links and access dates.]]
 
-# Appendix D: Decision record
+# Appendix G: How to read this document
 
-| ID | Recommendation | Status | Review date |
-|---|---|---|---|
-| D-001 | [[Recommendation]] | Proposed | [[Date]] |
-
-# Appendix E: Sources
-
-1. [[Source title, publisher, link, date accessed]]
-
-# Appendix F: How to read this document
-
-- **VERIFIED** means the figure comes from your own records or from a source we name.
-- **ESTIMATE** means we calculated it from verified figures, using the method shown.
-- **ASSUMPTION** means a working guess that has not been confirmed. Appendix A says how to confirm each one.
-- We recommend; you decide. Nothing in this document commits you to a price, a contract, a purchase, or a message to a customer until you approve it.
-- This document is decision support and not legal, tax, or financial advice.
+- **VERIFIED** means checked against a named source.
+- **ESTIMATE** means calculated from figures that are not fully confirmed.
+- **ASSUMPTION** means a working figure we had to assume. Each one says what would confirm it.
+- We recommend and you decide. Nothing in this document has been approved.
+- This document is business guidance. It is not legal, tax or financial advice. Use a qualified professional for those.

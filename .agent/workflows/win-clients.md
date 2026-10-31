@@ -1,21 +1,19 @@
 ---
-description: Build a 30/60/90-day plan to win new customers, covering ideal customers, prospects, outreach, channels, offer, and capacity.
+description: Produce a complete go-to-market plan to win first and repeat paying customers: best customer group, starter offer and price, named prospects, ready-to-send scripts, and a dated 90-day plan.
 ---
 
 # /win-clients
 
-Follow `shared/context-protocol.md`. Use the `chief-of-staff` skill to coordinate.
+Follow `shared/context-protocol.md` and the consulting standard in the rules. Use the `chief-of-staff` skill to coordinate. Research with web search and cite source and date. Decide; do not hand choices or research back to the owner. Never read the examples folder or other clients.
 
-0. **Gaps first.** If the profile's business-model, financial or operations sections are empty or "unknown", run `/fill-gaps` first, then continue with the researched working figures, each marked with its Basis. If the owner wants to start selling within days, include a days 1 to 3 launch checklist and treat early customer conversations as sales, not a delay.
-
-1. **Ideal customer** (`business-development-manager`): define the ICP from the client's best existing customers.
-2. **Prospects and partners** (`business-development-manager`): build a first prospect list and partnership list. Every entry needs a real source and date. Never invent contacts.
-3. **Channels and tests** (`head-of-growth`): pick two or three channels, with experiment cards, budgets, and thresholds.
-4. **Offer and pricing** (`revenue-growth-manager`): check that the offer and any entry packages make sense financially. Use discount maths for any proposed discount.
-5. **Capacity** (`chief-operating-officer`): maximum number of new customers per month the team can serve well.
-6. **Budget** (`chief-financial-officer`): cost per customer target, total budget, and payback.
-7. **Compliance** (`risk-compliance-officer`): outreach consent, opt-out, claims, and data handling.
-8. **Prioritize and brief** (`chief-growth-officer`, then `chief-of-staff`): a 30/60/90-day plan with owners, metrics, and the decisions the owner must make. Draft outreach messages but do not send them.
-9. Save the plan and prospect files in `clients/<slug>/outputs/`, and log the actions.
+0. **Gaps first.** If the profile's business-model, financial or operations sections are empty or "unknown", run `/fill-gaps` first, then continue with the researched working figures, each marked with its Basis.
+1. **Customer group** (`business-development-manager`, `growth-strategist`, `chief-strategy-officer`): rank the candidate customer groups with evidence and choose one winner and a runner-up, with confidence and a stop rule.
+2. **Starter offer and price** (`revenue-growth-manager`, `business-development-manager`): one fixed-scope starter offer, its price set against researched competitor prices, delivery time, exclusions, and the recurring follow-on plan. Run the margin check.
+3. **Named prospects** (`business-development-manager`): at least 30 real prospects with source URL, date, public business channel, one observable gap, and a first-message angle. Never invent anyone. If fewer than 30 can be verified, say how many and where to find the rest.
+4. **Channels and scripts** (`head-of-growth`, `business-development-manager`): the two or three best channels with expected response rates (sourced or labeled ASSUMPTION), ready-to-send first messages, follow-ups, a call script, objection answers, and a proposal outline. Draft only; the owner approves and sends.
+5. **Capacity and money** (`chief-operating-officer`, `chief-financial-officer`): realistic hours per project, how many projects the team can deliver per month, the researched monthly cost base, the break-even number of projects with the arithmetic, and the cash needed to last until first payments.
+6. **Compliance and set-up** (`risk-compliance-officer`): registration, tax questions for an accountant, data protection position, contract and deposit terms, outreach consent and opt-out.
+7. **Dated 90-day plan** (`chief-growth-officer`, then `chief-of-staff`): days 1 to 3, weeks 1 to 4, months 2 and 3, each action with owner, date, cost, target, and the scoreboard. Include what to do if targets are missed. List only approvals the owner must give.
+8. Run the consulting test in `shared/quality-gate.md`. Save the plan, prospect list and scripts in `clients/<slug>/outputs/`, and log the decisions.
 
 When the owner wants to hand the results to the client, offer `/client-pack` to turn everything into one client-ready PDF.

@@ -74,6 +74,7 @@ When officers disagree, present each position with evidence, quantified trade-of
 - Log every actionable recommendation in `clients/<slug>/outputs/decision-log.md`.
 - Review earlier reports and the decision log first, to avoid duplicate work, and track results of past recommendations.
 - Keep replies concise: bottom line first, detail in the saved report.
+- **Consulting standard: decide, do not defer.** Research the answer and recommend ONE choice, with a runner-up and a stop rule; the owner approves or overrides. Never hand the owner a gap, a choice, or a research task you can do yourself. Ask the owner only for sign-off and for facts only they hold, and even then plan with researched benchmarks. A plan for a new company must contain: the chosen customer group with reasons, one starter offer with scope and price, at least 30 named real prospects with sources, ready-to-send outreach scripts, a dated 90-day plan with weekly targets, expected results with the arithmetic, and the legal set-up steps.
 - To hand work to the client, run `/client-pack`: one plain-language PDF, never loose files, with no internal wording (no officer, skill, or file names).
 
 ## 8. The 12 operating rules (every officer)

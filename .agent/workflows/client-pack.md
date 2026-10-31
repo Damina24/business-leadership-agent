@@ -14,6 +14,8 @@ Use the `chief-of-staff` skill. Follow `shared/context-protocol.md`. The result 
 3. **Write one document** at `clients/<slug>/outputs/client-pack/client-pack.md` using `templates/client-pack/client-pack-template.md`. Keep its section order. Rules:
    - Write for the client's decision-maker in plain language. Explain any term the first time it appears.
    - Fold in everything that matters from the reports, pipeline, experiments, and decision log. Put detail in the appendices so the first pages stay short.
+   - The document gives answers, not tasks. Never write "choose", "decide", "supply" or "provide" as an action for the client where research can answer it. State the chosen customer group, offer, price, prospects, scripts and plan. The client's only decisions are to approve or override.
+   - Include the named prospect list, the ready-to-send scripts, the competitor prices and the research basis table in the appendices.
    - Never mention officers, skills, workflows, file names, or folders. Do not copy internal notes, review chatter, or working labels.
    - Say "Based on our research" for figures we researched (with the source) and "you told us" for facts the owner gave. Do not blur the two.
    - Keep every number's label (VERIFIED, ESTIMATE, ASSUMPTION), in capital letters. List all assumptions and data gaps in Appendix A with how to confirm each one.
