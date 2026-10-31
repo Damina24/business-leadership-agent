@@ -87,6 +87,14 @@ for pack in ROOT.glob("examples/**/client-pack/client-pack.md"):
     if "[[" in pack.read_text(encoding="utf-8"):
         errors.append(f"{pack.relative_to(ROOT)}: still contains [[placeholders]]")
 
+# Client pack section templates
+secs = ROOT / "templates" / "client-pack" / "sections"
+need = secs / "00-front-matter.md"
+if not need.exists() or len(list(secs.glob("*.md"))) < 19:
+    errors.append("templates/client-pack/sections/ must hold 00-front-matter.md plus the 18 section files")
+if "--status" not in (ROOT / "scripts" / "build_client_pack.py").read_text(encoding="utf-8"):
+    errors.append("scripts/build_client_pack.py must support --init and --status")
+
 # Privacy guard
 gi = (ROOT / ".gitignore").read_text(encoding="utf-8")
 if "clients/*" not in gi:

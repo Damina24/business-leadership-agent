@@ -2,8 +2,15 @@
 """Build ONE client-ready PDF from a client-pack markdown file.
 
 Usage:
-  python scripts/build_client_pack.py clients/<slug>
+  python scripts/build_client_pack.py clients/<slug> --init     create the section files to fill in
+  python scripts/build_client_pack.py clients/<slug> --status   show what is still missing
+  python scripts/build_client_pack.py clients/<slug>            check everything, then build the PDF
   python scripts/build_client_pack.py path/to/client-pack.md [--out report.pdf] [--force]
+
+The client pack is written as small section files in
+clients/<slug>/outputs/client-pack/sections/ (copied from templates/client-pack/sections/).
+The build joins them in order, refuses to run while any section is missing, empty or
+still has [[placeholders]], and then makes the PDF.
 
 On Windows use `py` instead of `python` if `python` is not found.
 
@@ -67,6 +74,111 @@ def check_text(body, force):
     if warnings:
         print("Warning: the text mentions internal items a client should not see:",
               ", ".join(warnings))
+
+
+ROOT = Path(__file__).resolve().parent.parent
+TEMPLATE_SECTIONS = ROOT / "templates" / "client-pack" / "sections"
+MIN_SECTION_CHARS = 150
+DEFERRAL_RE = re.compile(
+    r"(to be (determined|decided|provided|supplied)|please (provide|supply)|supply (the|your) (figures|numbers)|"
+    r"you (should|must|need to) (choose|decide)|choose (the|your) (first )?(customer|target))", re.I)
+
+
+def strip_comments(text):
+    return re.sub(r"<!--.*?-->", "", text, flags=re.S)
+
+
+def sections_dir(client):
+    return client / "outputs" / "client-pack" / "sections"
+
+
+def template_names():
+    if not TEMPLATE_SECTIONS.is_dir():
+        sys.exit(f"Section templates not found: {TEMPLATE_SECTIONS}")
+    return sorted(f.name for f in TEMPLATE_SECTIONS.glob("*.md"))
+
+
+def init_sections(client):
+    d = sections_dir(client)
+    d.mkdir(parents=True, exist_ok=True)
+    made, kept = [], []
+    for name in template_names():
+        dest = d / name
+        if dest.exists():
+            kept.append(name)
+        else:
+            dest.write_text((TEMPLATE_SECTIONS / name).read_text(encoding="utf-8"), encoding="utf-8")
+            made.append(name)
+    print(f"Sections folder: {d}")
+    print(f"Created {len(made)} section file(s); kept {len(kept)} that already existed.")
+    print("Now write each file, one at a time, replacing every [[...]] item. Then run with --status.")
+
+
+def section_report(client):
+    """Return a list of (name, state, detail) for every required section."""
+    d = sections_dir(client)
+    rows = []
+    for name in template_names():
+        f = d / name
+        if not f.exists():
+            rows.append((name, "MISSING", "file not created (run --init)"))
+            continue
+        raw = f.read_text(encoding="utf-8")
+        body = strip_comments(raw)
+        ph = sorted(set(PLACEHOLDER_RE.findall(body)))
+        if ph:
+            rows.append((name, "UNFINISHED", f"{len(ph)} placeholder(s), e.g. {ph[0][:60]}"))
+            continue
+        if not name.startswith("00-"):
+            content = re.sub(r"(?m)^#.*$", "", body).strip()
+            if len(content) < MIN_SECTION_CHARS:
+                rows.append((name, "EMPTY", f"only {len(content)} characters of content"))
+                continue
+        rows.append((name, "OK", ""))
+    return rows
+
+
+def status(client):
+    rows = section_report(client)
+    bad = [r for r in rows if r[1] != "OK"]
+    for name, state, detail in rows:
+        print(f"  {state:<10} {name}  {detail}".rstrip())
+    if bad:
+        print(f"\n{len(bad)} of {len(rows)} sections still need work. Write them, then run --status again.")
+        return False
+    print(f"\nAll {len(rows)} sections are complete. Run the build without --status to make the PDF.")
+    return True
+
+
+def assemble(client, force):
+    rows = section_report(client)
+    bad = [r for r in rows if r[1] != "OK"]
+    if bad and not force:
+        print("Cannot build yet. These sections need work:")
+        for name, state, detail in bad:
+            print(f"  {state:<10} {name}  {detail}".rstrip())
+        sys.exit("Fix them (see --status) and run again.")
+    d = sections_dir(client)
+    texts = [strip_comments((d / n).read_text(encoding="utf-8")).strip() for n in template_names()]
+    meta, first_body = parse_front_matter(texts[0] + "\n")
+    body_md = "\n\n".join([first_body.strip()] + texts[1:] if first_body.strip() else texts[1:])
+    pack = client / "outputs" / "client-pack"
+    src = pack / "client-pack.md"
+    fm = "\n".join(f"{k}: {v}" for k, v in meta.items())
+    src.write_text(f"---\n{fm}\n---\n\n{body_md}\n", encoding="utf-8")
+    scan = re.sub(r"\]\(https?://[^)]*\)", "]", body_md)  # ignore web addresses
+    warn = sorted({h for h in INTERNAL_HINTS if h in scan})
+    if warn:
+        print("Warning: the text mentions internal items a client should not see:", ", ".join(warn))
+    for line in sorted({m.group(0) for m in DEFERRAL_RE.finditer(body_md)}):
+        print(f"Warning: wording that hands work back to the client: '{line}'. Replace it with an answer.")
+    prospects = [f for f in template_names() if "prospects" in f]
+    if prospects:
+        txt = strip_comments((d / prospects[0]).read_text(encoding="utf-8"))
+        n = len(re.findall(r"(?m)^\|\s*\d+\s*\|", txt))
+        if n < 30:
+            print(f"Warning: only {n} numbered prospect rows found; the standard is 30 or more named, sourced prospects.")
+    return src, meta, body_md
 
 
 def tag_labels(html_text):
@@ -239,15 +351,36 @@ def page_count(pdf):
 
 def main():
     ap = argparse.ArgumentParser(description="Build one client-ready PDF from client-pack.md")
-    ap.add_argument("source", help="client folder (clients/<slug>) or a client-pack .md file")
+    ap.add_argument("source", nargs="?", help="client folder (clients/<slug>) or a client-pack .md file; leave out to use the active client")
     ap.add_argument("--out", help="output PDF path")
     ap.add_argument("--browser", help="path to Edge or Chrome")
     ap.add_argument("--force", action="store_true", help="build even if placeholders remain")
+    ap.add_argument("--init", action="store_true", help="create the section files for this client")
+    ap.add_argument("--status", action="store_true", help="show which sections still need work")
     args = ap.parse_args()
 
-    src = find_input(args.source)
-    meta, body_md = parse_front_matter(src.read_text(encoding="utf-8"))
-    check_text(body_md, args.force)
+    if not args.source:
+        active_file = ROOT / "clients" / "ACTIVE"
+        if not active_file.exists() or not active_file.read_text(encoding="utf-8").strip():
+            sys.exit("No active client. Give the client folder, for example: clients/my-client")
+        args.source = str(ROOT / "clients" / active_file.read_text(encoding="utf-8").strip())
+        print(f"Using the active client: {args.source}")
+    target = Path(args.source)
+    if args.init:
+        if not target.is_dir():
+            sys.exit("--init needs a client folder, for example clients/my-client")
+        init_sections(target)
+        return
+    if args.status:
+        if not target.is_dir():
+            sys.exit("--status needs a client folder, for example clients/my-client")
+        sys.exit(0 if status(target) else 1)
+    if target.is_dir() and sections_dir(target).is_dir():
+        src, meta, body_md = assemble(target, args.force)
+    else:
+        src = find_input(args.source)
+        meta, body_md = parse_front_matter(strip_comments(src.read_text(encoding="utf-8")))
+        check_text(body_md, args.force)
 
     slug = re.sub(r"[^a-z0-9]+", "-", (meta.get("client") or src.parent.parent.parent.name).lower()).strip("-")
     stamp = meta.get("date", date.today().isoformat())

@@ -76,6 +76,11 @@ When the work is done, run `/client-pack`. Instead of loose files, you get **one
 2. It builds the PDF and saves it in `clients/<slug>/outputs/client-pack/`.
 3. Read it before you send it. Every recommendation is still the client's decision.
 
+**If the agent stops before the PDF exists**, you can finish it yourself in CMD, without the agent:
+
+- `py scripts\build_client_pack.py --status` lists which sections are missing or unfinished.
+- `py scripts\build_client_pack.py` builds the PDF for the active client (or double-click `make-client-pack.bat`). It refuses to build until every section is complete, and tells you exactly what is missing.
+
 One-time setup: `pip install markdown`. The PDF is made with Microsoft Edge or Google Chrome, which most computers already have. If neither is found, the script saves a web page and tells you how to print it to PDF.
 
 ## How the team works
@@ -99,7 +104,7 @@ One-time setup: `pip install markdown`. The PDF is made with Microsoft Edge or G
 shared/                          protocols every officer follows
 templates/client/                blank client profile, data folder, decision log
 clients/                         YOUR client data (not committed)
-templates/client-pack/           template for the client-facing document
+templates/client-pack/sections/  the client document, as one small file per section
 scripts/build_client_pack.py     turns the client pack into one PDF
 scripts/validate.py              structure checks
 AGENTS.md                        entry point for other agent tools
